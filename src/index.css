@@ -1,0 +1,186 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ── Halftone dot texture fields ─────────────────────────────── */
+.halftone {
+  background-image: radial-gradient(circle at center, var(--halftone) 1px, transparent 1.6px);
+  background-size: 9px 9px;
+}
+.halftone-dense {
+  background-image: radial-gradient(circle at center, var(--halftone) 1px, transparent 1.6px);
+  background-size: 6px 6px;
+}
+.halftone-wide {
+  background-image: radial-gradient(circle at center, var(--halftone) 1.2px, transparent 1.8px);
+  background-size: 13px 13px;
+}
+.halftone-fine {
+  background-image: radial-gradient(circle at center, var(--halftone) 0.8px, transparent 1.3px);
+  background-size: 5px 5px;
+}
+.halftone-white {
+  background-image: radial-gradient(circle at center, rgb(var(--bg)) 1px, transparent 1.5px);
+  background-size: 5px 5px;
+}
+
+/* ── Halftone masking utilities ─────────────────────────────── */
+.mask-tr {
+  -webkit-mask-image: radial-gradient(ellipse 80% 80% at 100% 0%, #000 0%, transparent 65%);
+  mask-image: radial-gradient(ellipse 80% 80% at 100% 0%, #000 0%, transparent 65%);
+}
+.mask-bl {
+  -webkit-mask-image: radial-gradient(ellipse 80% 80% at 0% 100%, #000 0%, transparent 65%);
+  mask-image: radial-gradient(ellipse 80% 80% at 0% 100%, #000 0%, transparent 65%);
+}
+.mask-circle {
+  -webkit-mask-image: radial-gradient(circle at center, #000 35%, transparent 70%);
+  mask-image: radial-gradient(circle at center, #000 35%, transparent 70%);
+}
+.mask-fade-x {
+  -webkit-mask-image: linear-gradient(to right, transparent, #000 30%, #000 70%, transparent);
+  mask-image: linear-gradient(to right, transparent, #000 30%, #000 70%, transparent);
+}
+.mask-up {
+  -webkit-mask-image: linear-gradient(to top, #000, transparent 80%);
+  mask-image: linear-gradient(to top, #000, transparent 80%);
+}
+.mask-down {
+  -webkit-mask-image: linear-gradient(to bottom, #000, transparent);
+  mask-image: linear-gradient(to bottom, #000, transparent);
+}
+.photo-dissolve {
+  -webkit-mask-image: linear-gradient(to top, transparent 1%, #000 33%);
+  mask-image: linear-gradient(to top, transparent 1%, #000 33%);
+}
+.photo-fade-bottom {
+  -webkit-mask-image: linear-gradient(to top, transparent 0%, #000 45%);
+  mask-image: linear-gradient(to top, transparent 0%, #000 45%);
+}
+
+/* ── 3D Spotlight Card Deck (Bryl Lim Signature Component) ───── */
+.deck {
+  position: relative;
+  height: 22rem;
+  margin-inline: calc(50% - 50vw);
+  overflow-x: clip;
+  overflow-y: visible;
+}
+@supports not (overflow-x: clip) {
+  .deck { overflow-x: hidden; }
+}
+@media (min-width: 640px) {
+  .deck { height: 19.5rem; }
+}
+@media (min-width: 768px) {
+  .deck { margin-inline: 0; overflow: visible; }
+}
+
+.deck-card {
+  position: absolute;
+  top: 0.75rem;
+  left: 50%;
+  width: 19rem;
+  margin-left: -9.5rem;
+  transform-origin: center bottom;
+  transition: transform .5s cubic-bezier(.22, 1, .36, 1), box-shadow .35s ease, border-color .2s ease;
+  will-change: transform;
+  outline: none;
+}
+@media (min-width: 640px) {
+  .deck-card {
+    width: 22rem;
+    margin-left: -11rem;
+  }
+}
+
+.deck-card.is-center {
+  transform: translateY(0) rotate(0deg) scale(1);
+  z-index: 30;
+  box-shadow: 0 26px 55px -22px rgba(10, 10, 10, .45);
+}
+.deck-card.is-left {
+  transform: translateX(-42%) translateY(14px) rotate(-15deg) scale(.88);
+  z-index: 10;
+  box-shadow: 0 16px 32px -18px rgba(10, 10, 10, .3);
+  cursor: pointer;
+}
+.deck-card.is-right {
+  transform: translateX(42%) translateY(14px) rotate(15deg) scale(.88);
+  z-index: 20;
+  box-shadow: 0 16px 32px -18px rgba(10, 10, 10, .3);
+  cursor: pointer;
+}
+
+/* Dim back cards slightly so center card pops */
+.deck-card.is-left::after,
+.deck-card.is-right::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: rgb(var(--bg) / .42);
+  transition: background .35s ease;
+  pointer-events: none;
+}
+.deck-card.is-left:hover::after,
+.deck-card.is-right:hover::after {
+  background: rgb(var(--bg) / 0);
+}
+
+/* Hover lifts */
+.deck-card.is-center:hover {
+  transform: translateY(-8px) scale(1.015);
+  box-shadow: 0 34px 65px -22px rgba(10, 10, 10, .55);
+}
+.deck-card.is-left:hover {
+  transform: translateX(-48%) translateY(2px) rotate(-11deg) scale(.92);
+  z-index: 25;
+}
+.deck-card.is-right:hover {
+  transform: translateX(48%) translateY(2px) rotate(11deg) scale(.92);
+  z-index: 25;
+}
+
+/* Only center card links are active */
+.deck-card:not(.is-center) a {
+  pointer-events: none;
+}
+
+/* ── Animation & Utilities ───────────────────────────────────── */
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: .25; }
+}
+.pulse-dot {
+  animation: blink 1.8s ease-in-out infinite;
+}
+
+@keyframes caretBlink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+.animate-caret {
+  animation: caretBlink 1.06s step-end infinite;
+}
+
+/* Editorial quote styling */
+.rec-quote {
+  font-family: 'Source Serif 4', Georgia, 'Times New Roman', serif;
+}
+
+/* Clean custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgb(var(--g300));
+  border-radius: 9999px;
+}
+html.dark ::-webkit-scrollbar-thumb {
+  background: rgb(var(--g200));
+}
