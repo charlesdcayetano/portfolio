@@ -89,15 +89,17 @@ export const Hero: React.FC = () => {
                 <img
                   src={profile.avatarUrl}
                   alt={profile.name}
-                  width={576}
-                  height={720}
+                  width={400}
+                  height={500}
                   loading="eager"
-                  decoding="async"
+                  decoding="sync"
+                  // @ts-ignore - tells modern browsers this image is critical for LCP
+                  fetchpriority="high"
                   className="h-full w-full object-cover select-none grayscale contrast-[1.05] hover:grayscale-0 transition-all duration-500"
                   draggable={false}
                   onError={(e) => {
                     (e.target as HTMLImageElement).src =
-                      'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=600&q=80';
+                      'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=400&q=75';
                   }}
                 />
 

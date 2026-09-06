@@ -18,12 +18,14 @@ export interface ProfileData {
   }[];
 }
 
+
+
 export const profile: ProfileData = {
   name: "Charles D. Cayetano",
   role: "Front-End & Full-Stack Developer",
   location: "Roxas City, Capiz, Philippines",
   email: "cayetanocharlesd92000@gmail.com",
-  avatarUrl: "https://charlesdcayetano.github.io/portfolio/images/Portfolio.webp",
+  avatarUrl: "/public/images/Portfolio.webp",
   bio1: "I'm a front-end and full-stack developer based in the Philippines. I build applications where the interface, backend, database, and business rules seamlessly connect.",
   bio2: "Most of my work centers around operational business platforms and management systems — retail POS, hospital workflows, local government registries, and ATS resume tools.",
   socials: [
