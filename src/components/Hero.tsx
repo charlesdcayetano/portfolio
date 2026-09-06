@@ -85,30 +85,30 @@ export const Hero: React.FC = () => {
             <div className="relative rounded-2xl border border-g200 bg-g50 p-2">
               
               {/* Image Canvas Container */}
-              <div className="relative overflow-hidden rounded-xl border border-g200/80 bg-g100 aspect-[4/5]">
-                <img
-                  src={profile.avatarUrl}
-                  alt={profile.name}
-                  width={400}
-                  height={500}
-                  loading="eager"
-                  decoding="sync"
-                  // @ts-ignore - tells modern browsers this image is critical for LCP
-                  fetchpriority="high"
-                  className="h-full w-full object-cover select-none grayscale contrast-[1.05] hover:grayscale-0 transition-all duration-500"
-                  draggable={false}
-                  onError={(e) => {
-                    (e.target as HTMLImageElement).src =
-                      'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=400&q=75';
-                  }}
-                />
+                <div className="relative overflow-hidden rounded-xl border border-g200/80 bg-g100 aspect-[4/5]">
+                  <img
+                    src={profile.avatarUrl}
+                    alt={profile.name}
+                    width={400}
+                    height={500}
+                    loading="eager"
+                    decoding="sync"
+                    // @ts-ignore - instructs browser to prioritize fetching this critical LCP image
+                    fetchpriority="high"
+                    className="h-full w-full object-cover select-none grayscale contrast-[1.05] hover:grayscale-0 transition-all duration-500"
+                    draggable={false}
+                    onError={(e) => {
+                      (e.target as HTMLImageElement).src =
+                        '/images/Portfolio.webp';
+                    }}
+                  />
 
-                {/* Halftone Bottom Fade Overlay */}
-                <div
-                  aria-hidden="true"
-                  className="halftone-white mask-up pointer-events-none absolute inset-x-0 bottom-0 h-1/2 opacity-80"
-                />
-              </div>
+                  {/* Halftone Bottom Fade Overlay */}
+                  <div
+                    aria-hidden="true"
+                    className="halftone-white mask-up pointer-events-none absolute inset-x-0 bottom-0 h-1/2 opacity-80"
+                  />
+                </div>
 
               {/* Minimal Status Bar Badge */}
               <div className="mt-2 flex items-center justify-between px-2 py-1 font-mono text-[10px] text-g500">
