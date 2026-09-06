@@ -1,25 +1,96 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
   <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/webp" href="/portfolio/images/logo/name.webp" />
+    <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta property="og:title" content="Charles D. Cayetano — Front-End Developer" />
-    <meta property="og:description" content="Front-End Development working across web applications, business systems, and APIs. Based in the Philippines." />
+    <title>Charles D. Cayetano — Front-End & Full-Stack Developer</title>
+    <meta name="description" content="Charles D. Cayetano is a front-end and full-stack developer based in the Philippines. Building responsive web applications, business systems, and APIs." />
+
+    <!-- Open Graph / Meta -->
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://charlesdcayetano.github.io/portfolio/" />
-    <meta property="og:image" content="https://charlesdcayetano.github.io/portfolio/images/system/POS.png" />
+    <meta property="og:title" content="Charles D. Cayetano — Front-End & Full-Stack Developer" />
+    <meta property="og:description" content="Front-end and full-stack developer building modern web applications, business systems, and APIs. Based in the Philippines." />
+    <meta property="og:image" content="https://charlesdcayetano.github.io/portfolio/images/Portfolio.webp" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Charles D. Cayetano — Front-End Developer" />
-    <meta name="twitter:description" content="Front-End Development working across web applications, business systems, and APIs." />
-    <title>Charles D. Cayetano — Front-End Developer</title>
-    <meta name="description" content="Charles D. Cayetano — Front-End Developer. Building web applications and business systems from the Philippines." />
-    <script type="module" crossorigin src="/portfolio/assets/index-BAPqOb6x.js"></script>
-    <link rel="modulepreload" crossorigin href="/portfolio/assets/rolldown-runtime-CbXtAM7H.js">
-    <link rel="modulepreload" crossorigin href="/portfolio/assets/vendor-ldokEsTt.js">
-    <link rel="stylesheet" crossorigin href="/portfolio/assets/index-C0AzbrG_.css">
+    <meta name="twitter:title" content="Charles D. Cayetano — Front-End & Full-Stack Developer" />
+    <meta name="twitter:description" content="Front-end and full-stack developer building modern web applications, business systems, and APIs. Based in the Philippines." />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%230a0a0a'/><text x='50%' y='55%' dominant-baseline='middle' text-anchor='middle' font-family='monospace' font-weight='bold' font-size='42' fill='%23ffffff'>CC</text></svg>" />
+
+    <!-- Fonts: Geist, Geist Mono, Source Serif 4 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Geist+Mono:wght@300..600&family=Source+Serif+4:ital,opsz,wght@0,8..60,400..600;1,8..60,400&display=swap" rel="stylesheet" />
+
+    <style>
+      @font-face {
+        font-family: 'Geist Pixel';
+        src: url('https://cdn.jsdelivr.net/gh/vercel/geist-pixel-font@main/fonts/webfonts/GeistPixel-Square.woff2') format('woff2');
+        font-display: swap;
+      }
+
+      :root {
+        --bg: 255 255 255;
+        --ink: 10 10 10;
+        --g50: 250 250 250;  --g100: 245 245 245; --g200: 233 233 233; --g300: 212 212 212;
+        --g400: 163 163 163; --g500: 115 115 115; --g600: 82 82 82;   --g700: 64 64 64;
+        --g800: 38 38 38;    --g900: 23 23 23;    --g950: 10 10 10;
+        --halftone: rgba(10, 10, 10, 0.88);
+        --sel-bg: #0a0a0a; --sel-fg: #ffffff;
+      }
+
+      html.dark {
+        --bg: 12 12 15;
+        --ink: 244 244 245;
+        --g50: 24 24 27;     --g100: 30 30 34;    --g200: 42 42 48;   --g300: 58 58 66;
+        --g400: 138 138 146; --g500: 160 160 168; --g600: 184 184 192; --g700: 206 206 212;
+        --g800: 228 228 232; --g900: 240 240 243; --g950: 250 250 250;
+        --halftone: rgba(244, 244, 245, 0.38);
+        --sel-bg: #fafafa; --sel-fg: #0a0a0a;
+        color-scheme: dark;
+      }
+
+      html { background-color: rgb(var(--bg)); }
+      body { background-color: rgb(var(--bg)); color: rgb(var(--ink)); }
+      ::-moz-selection { background: var(--sel-bg); color: var(--sel-fg); }
+      ::selection { background: var(--sel-bg); color: var(--sel-fg); }
+
+      /* Coordinated crossfade during theme change */
+      html.theme-anim, html.theme-anim *, html.theme-anim *::before, html.theme-anim *::after {
+        transition: background-color .45s ease, border-color .45s ease, color .45s ease,
+                    fill .45s ease, stroke .45s ease, box-shadow .45s ease, outline-color .45s ease !important;
+      }
+      ::view-transition-old(root), ::view-transition-new(root) { animation: none; mix-blend-mode: normal; }
+    </style>
+
+    <script>
+      (function () {
+        const KEY = 'charles_portfolio_theme';
+        const root = document.documentElement;
+        const mq = window.matchMedia ? window.matchMedia('(prefers-color-scheme: dark)') : null;
+        function pref() {
+          try {
+            const v = localStorage.getItem(KEY);
+            return (v === 'dark' || v === 'light' || v === 'system') ? v : 'dark';
+          } catch (e) {
+            return 'dark';
+          }
+        }
+        function isDark(p) {
+          return p === 'dark' || (p === 'system' && !!mq && mq.matches);
+        }
+        function setClass(p) {
+          root.classList.toggle('dark', isDark(p));
+        }
+        setClass(pref());
+        if (mq) mq.addEventListener('change', function () { if (pref() === 'system') setClass('system'); });
+      })();
+    </script>
+    <script type="module" crossorigin src="./assets/index-BHNOW7Vm.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-CYLDML66.css">
   </head>
-  <body>
+  <body class="relative overflow-x-hidden font-sans text-ink antialiased selection:bg-ink selection:text-bg">
     <div id="root"></div>
   </body>
 </html>
