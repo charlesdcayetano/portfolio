@@ -15,13 +15,22 @@
     <meta name="twitter:title" content="Charles D. Cayetano — Front-End & Full-Stack Developer" />
     <meta name="twitter:description" content="Front-end and full-stack developer building modern web applications, business systems, and APIs. Based in the Philippines." />
 
+    <!-- Preload Critical LCP Image -->
+    <link rel="preload" as="image" href="https://charlesdcayetano.github.io/portfolio/images/Portfolio.webp" type="image/webp" />
+
     <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%230a0a0a'/><text x='50%' y='55%' dominant-baseline='middle' text-anchor='middle' font-family='monospace' font-weight='bold' font-size='42' fill='%23ffffff'>CC</text></svg>" />
 
-    <!-- Fonts: Geist, Geist Mono, Source Serif 4 -->
+    <!-- Preconnect & DNS Prefetch to early-shake external CDNs -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Geist+Mono:wght@300..600&family=Source+Serif+4:ital,opsz,wght@0,8..60,400..600;1,8..60,400&display=swap" rel="stylesheet" />
+    <link rel="dns-prefetch" href="https://cdn.jsdelivr.net" />
+
+    <!-- Non-Blocking Async Google Fonts Loader -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Geist+Mono:wght@300..600&family=Source+Serif+4:ital,opsz,wght@0,8..60,400..600;1,8..60,400&display=swap" media="print" onload="this.media='all'" />
+    <noscript>
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Geist+Mono:wght@300..600&family=Source+Serif+4:ital,opsz,wght@0,8..60,400..600;1,8..60,400&display=swap" />
+    </noscript>
 
     <style>
       @font-face {
@@ -87,8 +96,10 @@
         if (mq) mq.addEventListener('change', function () { if (pref() === 'system') setClass('system'); });
       })();
     </script>
-    <script type="module" crossorigin src="./assets/index-BHNOW7Vm.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/index-CYLDML66.css">
+    <script type="module" crossorigin src="./assets/index-Dq3cTNLd.js"></script>
+    <link rel="modulepreload" crossorigin href="./assets/icons-BmTYRbQl.js">
+    <link rel="modulepreload" crossorigin href="./assets/react-vendor-PbDKze8e.js">
+    <link rel="stylesheet" crossorigin href="./assets/index-9lIJyLfr.css">
   </head>
   <body class="relative overflow-x-hidden font-sans text-ink antialiased selection:bg-ink selection:text-bg">
     <div id="root"></div>
