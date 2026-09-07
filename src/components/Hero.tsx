@@ -31,12 +31,11 @@ export const Hero: React.FC = () => {
 
       {/* Main Structural Layout Grid */}
       <div className="grid gap-8 lg:grid-cols-12 lg:items-center">
-        
         {/* Left Column: Hero Typography & Info Block */}
         <div className="lg:col-span-7 flex flex-col justify-between space-y-6">
           <div>
             <span className="font-mono text-[12px] uppercase tracking-widest text-g400 block mb-1">
-              {profile.title || 'Front - End Developer'}
+              {profileTitle}
             </span>
             <h1 className="font-pixel text-4xl sm:text-5xl lg:text-6xl text-ink leading-tight tracking-tight">
               {profile.name}
@@ -83,32 +82,33 @@ export const Hero: React.FC = () => {
           <div className="relative w-full max-w-[280px] sm:max-w-[320px]">
             {/* Outer Architectural Border Container */}
             <div className="relative rounded-2xl border border-g200 bg-g50 p-2">
-              
               {/* Image Canvas Container */}
-                <div className="relative overflow-hidden rounded-xl border border-g200/80 bg-g100 aspect-[4/5]">
-                  <img
-                    src={profile.avatarUrl}
-                    alt={profile.name}
-                    width={400}
-                    height={500}
-                    loading="eager"
-                    decoding="sync"
-                    // @ts-ignore - instructs browser to prioritize fetching this critical LCP image
-                    fetchpriority="high"
-                    className="h-full w-full object-cover select-none grayscale contrast-[1.05] hover:grayscale-0 transition-all duration-500"
-                    draggable={false}
-                    onError={(e) => {
-                      (e.target as HTMLImageElement).src =
-                        '/images/Portfolio.webp';
-                    }}
-                  />
+              <div className="relative overflow-hidden rounded-xl border border-g200/80 bg-g100 aspect-[4/5]">
+                <img
+                  src={profile.avatarUrl || '/images/Portfolio.webp'}
+                  alt={profile.name}
+                  width={400}
+                  height={500}
+                  loading="eager"
+                  decoding="sync"
+                  // @ts-ignore - Instructs browser engine to prioritize LCP image fetch
+                  fetchpriority="high"
+                  className="h-full w-full object-cover select-none grayscale contrast-[1.05] hover:grayscale-0 transition-all duration-500"
+                  draggable={false}
+                  onError={(e) => {
+                    const target = e.target as HTMLImageElement;
+                    if (target.src !== window.location.origin + '/images/Portfolio.webp') {
+                      target.src = '/images/Portfolio.webp';
+                    }
+                  }}
+                />
 
-                  {/* Halftone Bottom Fade Overlay */}
-                  <div
-                    aria-hidden="true"
-                    className="halftone-white mask-up pointer-events-none absolute inset-x-0 bottom-0 h-1/2 opacity-80"
-                  />
-                </div>
+                {/* Halftone Bottom Fade Overlay */}
+                <div
+                  aria-hidden="true"
+                  className="halftone-white mask-up pointer-events-none absolute inset-x-0 bottom-0 h-1/2 opacity-80"
+                />
+              </div>
 
               {/* Minimal Status Bar Badge */}
               <div className="mt-2 flex items-center justify-between px-2 py-1 font-mono text-[10px] text-g500">
@@ -121,7 +121,6 @@ export const Hero: React.FC = () => {
             </div>
           </div>
         </div>
-
       </div>
     </section>
   );
