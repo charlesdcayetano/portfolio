@@ -21,11 +21,11 @@ const outcomes: OutcomeItem[] = [
   },
   {
     quote:
-      "Designed specifically for the realities of local retail and sari-sari counters in the Philippines. It combines barcode scanning and inventory tracking in a fast, offline-tolerant workflow without unnecessary bloat.",
-    author: "Chep-POS System",
-    role: "Retail Platform · Full-Stack Developer",
-    initials: "CP",
-    project: "Chep-POS — Retail Terminal",
+      "Engineered to streamline academic operations by unifying student enrollment, faculty workloads, grade submissions, and transcript processing into a secure, role-based institutional portal.",
+    author: "CSAS Academic System",
+    role: "Higher Education · Full-Stack Developer",
+    initials: "CS",
+    project: "CSAS — Smart Academic System",
   },
   {
     quote:

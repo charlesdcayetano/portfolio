@@ -16,28 +16,28 @@ export interface Project {
 
 export const flagshipProjects: Project[] = [
   {
-    id: "chep-pos",
+    id: "csas",
     number: "01",
-    badge: "Retail Platform",
-    tags: ["POS Terminal", "Offline-Tolerant", "Inventory"],
-    title: "Chep-POS",
-    subtitle: "Retail Management & Point of Sale System",
+    badge: "Higher Education",
+    tags: ["Academic Management", "Enrollment", "Grading"],
+    title: "CSAS — Chep Smart Academic System",
+    subtitle: "Comprehensive Academic & Institutional Management Platform",
     description:
-      "A centralized POS platform with real-time barcode scanning, inventory auditing, sales tracking, and transaction reporting designed for Philippine retail counters.",
+      "A smart academic management platform handling student enrollment workflows, grading mark sheets, faculty loading, class scheduling, and official scholastic records.",
     niche:
-      "Built specifically for sari-sari stores and community retailers that need an immediate, lightweight checkout workflow rather than bloated enterprise software.",
+      "Engineered to streamline higher education administrative operations by replacing manual record-keeping with centralized digital workflows.",
     features: [
-      "POS Checkout Terminal",
-      "Inventory Management",
-      "Sales Tracking",
-      "Customer Ledger",
-      "Daily Shift Reports",
+      "Student Enrollment Workflow",
+      "Digital Grading & Mark Sheets",
+      "Faculty Loading & Scheduling",
+      "Scholastic Record Tracking",
+      "Administrative Reporting",
     ],
-    tech: ["Laravel", "PHP", "MySQL", "Tailwind CSS", "JavaScript"],
-    github: "https://github.com/charlesdcayetano/chep-pos",
-    demo: "https://github.com/charlesdcayetano/chep-pos",
+    tech: ["Laravel", "PHP", "MySQL", "Bootstrap", "JavaScript"],
+    github: "https://github.com/charlesdcayetano/csas",
+    demo: "https://github.com/charlesdcayetano/csas",
     image:
-      "https://charlesdcayetano.github.io/portfolio/images/system/POS.webp",
+      "https://charlesdcayetano.github.io/portfolio/images/system/csas.webp",
   },
 
   {
@@ -175,14 +175,6 @@ export interface SecondaryProject {
 
 export const secondaryProjects: SecondaryProject[] = [
   {
-    title: "CSAS — Chep Smart Academic System",
-    category: "Higher Education",
-    description:
-      "Smart academic management platform covering enrollment workflows, grading sheets, faculty loads, and student scholastic records.",
-    tech: "Laravel · MySQL · Bootstrap",
-  },
-
-  {
     title: "Staff-Sync",
     category: "Human Resources",
     description:
@@ -200,9 +192,17 @@ export const secondaryProjects: SecondaryProject[] = [
 
   {
     title: "PanitCart",
-    category: "E-Commerce & POS",
+    category: "E-Commerce & Catalog",
     description:
       "Online catalog and inventory counter built for local small-business product catalogs and order processing.",
     tech: "Laravel · MySQL · PHP",
+  },
+
+  {
+    title: "TaskFlow",
+    category: "Productivity",
+    description:
+      "Lightweight Kanban-style internal project task board for tracking dev sprint deliverables.",
+    tech: "Vue 3 · Tailwind CSS · PHP",
   },
 ];

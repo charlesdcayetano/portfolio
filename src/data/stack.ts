@@ -10,11 +10,11 @@ export const techStackCategories: TechCategory[] = [
   },
   {
     title: "Backend & Database",
-    skills: ["Laravel 11", "PHP", "Python 3", "MySQL", "RESTful APIs", "Authentication / RBAC", "CRUD Architecture"],
+    skills: ["Laravel 11", "PHP", "MySQL", "RESTful APIs", "Authentication", "CRUD Architecture"],
   },
   {
     title: "AI Tools & Pair Programming",
-    skills: ["Claude Code", "GitHub Copilot", "ChatGPT", "Gemini", "Grok", "n8n Automation"],
+    skills: ["Claude Code", "GitHub Copilot", "ChatGPT", "Gemini", "Grok"],
   },
   {
     title: "Tooling & Design",
@@ -22,7 +22,7 @@ export const techStackCategories: TechCategory[] = [
   },
   {
     title: "Automation & Deployment",
-    skills: ["n8n", "Vercel", "Namecheap", "Netlify", "Cloudflare", "Docker", "cPanel", "WHM"],
+    skills: ["n8n", "Vercel", "Namecheap", "Netlify"],
   },
 ];
 

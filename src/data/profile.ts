@@ -29,7 +29,7 @@ export const profile: ProfileData = {
   email: "cayetanocharlesd92000@gmail.com",
   avatarUrl: "./images/Portfolio.webp", // Fixed: Removed /public
   bio1: "I'm a front-end and full-stack developer based in the Philippines. I build applications where the interface, backend, database, and business rules seamlessly connect.",
-  bio2: "Most of my work centers around operational business platforms and management systems — retail POS, hospital workflows, local government registries, and ATS resume tools.",
+  bio2: "Most of my work centers around operational business platforms and management systems, hospital workflows, local government registries, and ATS resume tools.",
   socials: [
     { label: "github ↗", href: "https://github.com/charlesdcayetano" },
     { label: "linkedin ↗", href: "https://www.linkedin.com/in/charlesdcayetano/" },
@@ -39,8 +39,8 @@ export const profile: ProfileData = {
   stats: [
     { value: "6+", label: "featured systems", detail: "End-to-end platforms shipped" },
     { value: "14+", label: "credentials", detail: "Diplomas & specialized trainings" },
-    { value: "BSIT", label: "Filamer Christian Univ.", detail: "Batch 2025 Graduate" },
-    { value: "GMT+8", label: "Philippines", detail: "Available for remote & full-time" },
+    { value: "BSIT", label: "Filamer Christian University.", detail: "Batch 2025 Graduate" },
+    { value: "GMT+8", label: "Philippines", detail: "Available for remote & Full-time" },
   ],
   title: "Front-End & Full-Stack Developer"
 };

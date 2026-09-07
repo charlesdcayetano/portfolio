@@ -18,12 +18,6 @@ const INITIAL_MESSAGES: ChatMessage[] = [
     time: 'Recently',
     isOwner: true,
   },
-  {
-    id: '2',
-    name: 'Dev Community',
-    message: 'Awesome work on Chep-POS and MediCore. The Philippine LGU integration is super clean!',
-    time: '2h ago',
-  },
 ];
 
 interface CommunityChatProps {

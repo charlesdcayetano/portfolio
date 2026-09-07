@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import {
   ArrowUpRight,
   ExternalLink,
-  Layers3,
   Terminal,
   Cpu,
   CornerDownRight,
@@ -21,39 +20,39 @@ interface Project {
 const projects: Project[] = [
   {
     number: '01',
-    category: 'Resume Platform',
-    title: 'ChepResume',
+    category: 'Higher Education',
+    title: 'CSAS — Chep Smart Academic System',
     description:
-      'A modern resume builder designed to help users create polished, professional resumes quickly.',
-    technologies: ['Laravel', 'Vue 3', 'Inertia', 'Tailwind'],
-    href: '#',
+      'A comprehensive academic management platform handling student enrollment workflows, grading mark sheets, faculty loading, and official scholastic records.',
+    technologies: ['Laravel', 'PHP', 'MySQL', 'Bootstrap', 'JavaScript'],
+    href: 'https://github.com/charlesdcayetano/csas',
   },
   {
     number: '02',
-    category: 'Booking Management',
-    title: 'Chep Booking Management System',
+    category: 'Resume Platform',
+    title: 'Cheap Resume',
     description:
-      'A centralized booking platform for managing reservations, customers, payments, and operational workflows.',
-    technologies: ['Laravel', 'MySQL', 'Redis', 'PayMongo'],
-    href: '#',
+      'A real-time split-screen builder designed to help users create ATS-friendly, professional resumes with vector PDF exports.',
+    technologies: ['Laravel 11', 'Vue 3', 'Inertia.js', 'Tailwind'],
+    href: 'https://github.com/charlesdcayetano/cheapresume',
   },
   {
     number: '03',
-    category: 'Point of Sale',
-    title: 'ChepPOS',
+    category: 'Booking Management',
+    title: 'CBMS — Booking Management System',
     description:
-      'A business management platform combining point-of-sale operations, inventory, customers, analytics, and automation.',
-    technologies: ['Laravel', 'PHP', 'MySQL', 'Vue'],
-    href: '#',
+      'A web-based booking management system centralizing customer reservations, service schedules, availability, and payment tracking.',
+    technologies: ['Laravel 11', 'PHP', 'MySQL', 'Redis', 'Tailwind'],
+    href: 'https://github.com/charlesdcayetano/bms',
   },
   {
     number: '04',
     category: 'Travel Platform',
     title: 'Byahe Ta',
     description:
-      'A travel-oriented platform concept focused on simplifying trip discovery, planning, and booking.',
-    technologies: ['React', 'JavaScript', 'Tailwind', 'API'],
-    href: '#',
+      'A public transit guide centralizing local jeepney and bus routes, timetable schedules, fare matrices, and terminal locations.',
+    technologies: ['Laravel', 'PHP', 'MySQL', 'JavaScript', 'Leaflet'],
+    href: 'https://github.com/charlesdcayetano/byahe-ta',
   },
 ];
 
