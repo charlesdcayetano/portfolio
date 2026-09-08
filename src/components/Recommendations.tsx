@@ -15,7 +15,7 @@ const outcomes: OutcomeItem[] = [
     quote:
       "A centralized system designed to make alumni information and employment surveys easier to manage, track, and access. Successfully eliminated legacy paper-based graduate tracer processes.",
     author: "FilTracer Capstone",
-    role: "Filamer Christian University · Lead Architect",
+    role: "Filamer Christian University · Graphic Designer",
     initials: "FC",
     project: "FilTracer — Alumni Tracer System",
   },

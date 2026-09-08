@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
-import { Mail, Volume2, VolumeX, MessageSquare, Sun, Moon, Monitor, Terminal, Command } from 'lucide-react';
+import { Mail, Volume2, VolumeX, MessageSquare, Sun, Moon, Monitor, Command } from 'lucide-react';
 import { sound } from '../utils/sound';
 import { ThemeMode } from '../utils/theme';
+import { SpotifyWidget } from './SpotifyWidget';
 
 interface SidebarProps {
   currentTheme: ThemeMode;
@@ -80,6 +81,9 @@ export const Sidebar: React.FC<SidebarProps> = ({
 
       {/* Utility System Modules */}
       <div className="space-y-3 pt-3 border-t border-g200">
+        {/* Real-time Spotify Status Widget */}
+        <SpotifyWidget />
+
         {/* Command Launcher Triggers */}
         <div className="space-y-1">
           <button
