@@ -104,6 +104,9 @@ export const App: React.FC = () => {
           {/* Projects */}
           <ProjectDeck />
 
+          {/* Experience */}
+          <Experience />
+
           {/* Stats */}
           <StatsRibbon />
 
@@ -119,9 +122,6 @@ export const App: React.FC = () => {
               <SpotifyWidget />
             </section> 
             */}
-
-          {/* Experience */}
-          <Experience />
 
           {/* Certifications */}
           <Certifications />
