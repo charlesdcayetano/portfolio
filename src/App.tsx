@@ -101,6 +101,9 @@ export const App: React.FC = () => {
           {/* Hero */}
           <Hero />
 
+          {/* Projects */}
+          <ProjectDeck />
+
           {/* Stats */}
           <StatsRibbon />
 
@@ -115,10 +118,7 @@ export const App: React.FC = () => {
             >
               <SpotifyWidget />
             </section> 
-*/}
-
-          {/* Projects */}
-          <ProjectDeck />
+            */}
 
           {/* Experience */}
           <Experience />
