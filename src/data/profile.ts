@@ -27,7 +27,7 @@ export const profile: ProfileData = {
   role: "Front-End & Full-Stack Developer",
   location: "Roxas City, Capiz, Philippines",
   email: "cayetanocharlesd92000@gmail.com",
-  avatarUrl: "./images/Portfolio.webp", // Fixed: Removed /public
+  avatarUrl: "./images/Portrait.webp", // Fixed: Removed /public
   bio1: "I'm a front-end and full-stack developer based in the Philippines. I build applications where the interface, backend, database, and business rules seamlessly connect.",
   bio2: "Most of my work centers around operational business platforms and management systems, hospital workflows, local government registries, and ATS resume tools.",
   socials: [
