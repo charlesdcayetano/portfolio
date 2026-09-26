@@ -59,7 +59,7 @@ export default function ProfileHeader() {
         </div>
 
         <img
-          src="/chep/images/Portfolio.webp"
+          src="public/images/Portfolio.webp"
           alt="Portrait of Charles D. Cayetano"
           width={140}
           height={140}
