@@ -9,8 +9,8 @@ export const profile = {
   linkedin: 'https://www.linkedin.com/in/charlesdcayetano/',
   facebook: 'https://www.facebook.com/parengchep',
   x: 'https://x.com/ch4rlescayetano',
-  portfolio: 'https://charlesdcayetano.github.io/portfolio/',
-  repo: 'https://github.com/charlesdcayetano/portfolio',
+  portfolio: 'https://chep.website/',
+  repo: 'https://github.com/charlesdcayetano/chep',
   heroStatement:
     'Front-end and full-stack developer building practical web applications, business systems, and digital workflows.',
   heroSupporting:
