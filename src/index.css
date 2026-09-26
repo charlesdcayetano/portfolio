@@ -1,0 +1,68 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-[#FAFAFA] text-[#171717] dark:bg-[#111111] dark:text-[#F5F5F5];
+  font-family: 'Inter', system-ui, sans-serif;
+  transition: background-color 0.2s ease, color 0.2s ease;
+  background-image:
+    linear-gradient(to right, rgba(128,128,128,0.06) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(128,128,128,0.06) 1px, transparent 1px);
+  background-size: 32px 32px;
+}
+
+::selection {
+  background-color: #B45309;
+  color: #FAFAFA;
+}
+
+.dark ::selection {
+  background-color: #F59E0B;
+  color: #111111;
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid #B45309;
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+.dark a:focus-visible,
+.dark button:focus-visible {
+  outline-color: #F59E0B;
+}
+
+.link-arrow {
+  @apply inline-flex items-center gap-1 text-[#171717] dark:text-[#F5F5F5] hover:text-[#B45309] dark:hover:text-[#F59E0B] transition-colors duration-150;
+}
+
+.link-arrow svg {
+  transition: transform 0.15s ease;
+}
+
+.link-arrow:hover svg {
+  transform: translate(2px, -2px);
+}
+
+.section-label {
+  @apply font-mono text-xs tracking-widest uppercase text-[#999999] dark:text-[#737373];
+}
+
+.tag {
+  @apply font-mono text-xs px-2 py-1 rounded border border-[#E5E5E5] dark:border-[#2A2A2A] text-[#666666] dark:text-[#A3A3A3];
+}
